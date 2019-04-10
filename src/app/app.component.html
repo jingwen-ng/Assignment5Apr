@@ -1,22 +1,8 @@
-<h1>{{ todoListTitle }}</h1>
-
-<div *ngIf="todosTasks.length !== 0">
-  <ul>
-    <li
-      *ngFor="let task of todosTasks"
-      [class.completed]="todos[task]"
-      (click)="onClickTask(task)"
-    >
-      {{ task }}
-    </li>
-  </ul>
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1 class="text-center">
+    {{ title }}
+  </h1>
+  <app-productlist></app-productlist>
 </div>
 
-<div *ngIf="todosTasks.length === 0">
-  <h3>No tasks found</h3>
-</div>
-
-<div>{{ checkNumCompleted() }} tasks have been completed</div>
-
-<button (click)="onClearList()">Clear List</button>
-<button (click)="onAddTask()">Add Task</button>
